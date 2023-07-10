@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment2">
+
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            android:id="@+id/action_loginFragment2_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment2_to_kingMainFragment"
+            app:destination="@id/kingMainFragment"
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit" />
+        <action
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            android:id="@+id/action_loginFragment2_to_loginPINFragment"
+            app:destination="@id/loginPINFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            android:id="@+id/action_forgotPasswordFragment_to_comfirmOTPFragment"
+            app:destination="@id/comfirmOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comfirmOTPFragment"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.ConfirmOTPFragment"
+        android:label="fragment_comfirm_o_t_p"
+        tools:layout="@layout/fragment_comfirm_o_t_p">
+        <action
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            android:id="@+id/action_comfirmOTPFragment_to_newPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password">
+        <action
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            android:id="@+id/action_newPasswordFragment_to_successNewPasswordFragment"
+            app:destination="@id/successNewPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kingMainFragment"
+        android:name="com.example.expensemanagementapp.KingMainFragment"
+        android:label="fragment_king_main"
+        tools:layout="@layout/fragment_king_main" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            app:enterAnim="@anim/fragment_slide_left_enter"
+            app:exitAnim="@anim/fragment_slide_left_exit"
+            app:popEnterAnim="@anim/fragment_slide_right_enter"
+            app:popExitAnim="@anim/fragment_slide_right_exit"
+            android:id="@+id/action_registerFragment_to_comfirmOTPFragment"
+            app:destination="@id/comfirmOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successNewPasswordFragment"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.SuccessNewPasswordFragment"
+        android:label="fragment_success_new_password"
+        tools:layout="@layout/fragment_success_new_password" />
+    <fragment
+        android:id="@+id/loginPINFragment"
+        android:name="com.example.expensemanagementapp.LoginPINFragment"
+        android:label="fragment_login_p_i_n"
+        tools:layout="@layout/fragment_login_p_i_n" />
+</navigation>
