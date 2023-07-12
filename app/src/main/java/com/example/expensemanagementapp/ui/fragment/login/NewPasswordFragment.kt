@@ -5,18 +5,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.expensemanagementapp.MainActivity
 import com.example.expensemanagementapp.R
+import com.example.expensemanagementapp.base.BaseViewModelFragment
+import com.example.expensemanagementapp.databinding.FragmentComfirmOTPBinding
+import com.example.expensemanagementapp.databinding.FragmentNewPasswordBinding
+import com.example.expensemanagementapp.viewmodel.MainViewModel
 
-class NewPasswordFragment : Fragment() {
+class NewPasswordFragment : BaseViewModelFragment<FragmentNewPasswordBinding, MainViewModel>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override val viewModel: MainViewModel by lazy {
+        (activity as MainActivity).viewModel
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_new_password, container, false)
+    override fun initView() {
+
     }
+
+    override fun initOnClickListener() {
+
+    }
+
+    override fun observeLiveData() {
+
+    }
+
+    override fun inflateBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FragmentNewPasswordBinding {
+        return FragmentNewPasswordBinding.inflate(inflater, container, false)
+    }
+
 }

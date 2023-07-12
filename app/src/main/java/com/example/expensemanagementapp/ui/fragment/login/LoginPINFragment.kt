@@ -1,19 +1,14 @@
 package com.example.expensemanagementapp.ui.fragment.login
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.example.expensemanagementapp.MainActivity
-import com.example.expensemanagementapp.R
 import com.example.expensemanagementapp.base.BaseViewModelFragment
-import com.example.expensemanagementapp.databinding.FragmentForgotPasswordBinding
+import com.example.expensemanagementapp.databinding.FragmentLoginPINBinding
 import com.example.expensemanagementapp.viewmodel.MainViewModel
 
 
-class ForgotPasswordFragment :
-    BaseViewModelFragment<FragmentForgotPasswordBinding, MainViewModel>() {
+class LoginPINFragment : BaseViewModelFragment<FragmentLoginPINBinding, MainViewModel>() {
 
     override val viewModel: MainViewModel by lazy {
         (activity as MainActivity).viewModel
@@ -32,10 +27,9 @@ class ForgotPasswordFragment :
     }
 
     override fun inflateBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
-    ): FragmentForgotPasswordBinding {
-        return FragmentForgotPasswordBinding.inflate(inflater, container, false)
+        inflater: LayoutInflater, container: ViewGroup?
+    ): FragmentLoginPINBinding {
+        return FragmentLoginPINBinding.inflate(inflater, container, false)
     }
 
 }

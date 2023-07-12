@@ -13,6 +13,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textLogin">Đăng nhập</string>
     <string name="textRegister">Đăng ký</string>
+    <string name="registerSuccess">Đăng ký thành công !</string>
+    <string name="registerSuccessText">Xin chúc mừng. tài khoản của bạn đã được tạo. Đăng nhập để cùng khám phá ứng dụng ngay!</string>
     <string name="confirm">Xác thực</string>
     <string name="textLoginMore">Mỗi giây một bất ngờ, đăng nhập và khám phá thế giới ngay !</string>
     <string name="textUsername">Số điện thoại/Email</string>
@@ -36,4 +38,13 @@
     <string name="textPasswordRegisterLength">Độ dài từ 8 - 15 ký tự</string>
     <string name="textContinue">Tiếp tục</string>
     <string name="textPolicyRegister">Tôi đã đọc, hiểu rõ và đồng ý với <u>điều kiện, điều khoản</u> </string>
+    <string name="textDownTimeOTP">Mã OTP có hiệu lực trong</string>
+    <string name="sendAgain">Gửi lại</string>
+    <string name="sendMail"><u>Nhận mã xác thực qua Email</u></string>
+    <string name="loginByPin">Đăng nhập mã PIN</string>
+    <string name="textTopLoginPin">Nhập mã Pin bạn đang sử dụng</string>
+    <string name="textTopForgotPassword">Bạn vui lòng nhập số điện thoại hoặc email để lấy lại mật khẩu!</string>
+    <string name="forgotPassword">Quên mật khẩu</string>
+    <string name="newPassword">Mật khẩu mới</string>
+    <string name="pleaseNewPassword">Vui lòng nhập mật khẩu mới</string>
 </resources>

@@ -5,7 +5,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment2">
 
-
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.expensemanagementapp.ui.fragment.login.LoginFragment"
@@ -107,7 +106,7 @@
         tools:layout="@layout/fragment_success_new_password" />
     <fragment
         android:id="@+id/loginPINFragment"
-        android:name="com.example.expensemanagementapp.LoginPINFragment"
+        android:name="com.example.expensemanagementapp.ui.fragment.login.LoginPINFragment"
         android:label="fragment_login_p_i_n"
         tools:layout="@layout/fragment_login_p_i_n" />
 </navigation>

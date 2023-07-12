@@ -1,14 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginPINFragment">
+    android:background="@color/blue"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.login.LoginPINFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:text="@string/loginByPin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sp" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:text="@string/textTopLoginPin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sp" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_100dp"
+        android:background="@drawable/background_login"
+        android:paddingHorizontal="@dimen/_16dp">
+
+        <com.example.expensemanagementapp.ui.customview.pinview.OtpView
+            android:id="@+id/otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_24dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_20sp"
+            app:OtpHideLineWhenFilled="false"
+            app:OtpItemCount="6"
+            app:OtpItemRadius="@dimen/_8dp"
+            app:OtpLineColor="@color/otp_item_state"
+            app:OtpState_filled="true"
+            app:OtpViewType="rectangle" />
+
+        <TextView
+            android:id="@+id/textError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otp"
+            android:layout_marginTop="@dimen/_4dp"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_14sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textError"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_button"
+            android:padding="@dimen/_16dp"
+            android:text="@string/textLogin"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp" />
+
+        <TextView
+            android:id="@+id/loginMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_marginTop="@dimen/_122dp"
+            android:text="@string/loginMore"
+            android:textAlignment="center"
+            android:textColor="@color/textColorLogin"
+            android:textSize="@dimen/_16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/contentLoginMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginMore"
+            android:layout_marginHorizontal="@dimen/_18dp"
+            android:layout_marginTop="@dimen/_18dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btnPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_lock_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnFace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_face_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Face ID"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contentRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentLoginMore"
+            android:layout_marginTop="@dimen/_70dp"
+            android:layout_marginBottom="@dimen/_50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/whatIsAccount"
+                android:textColor="@color/color_979797"
+                android:textSize="@dimen/_16sp" />
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/registerNow"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -41,6 +41,7 @@
                 android:id="@+id/username"
                 android:inputType="text"
                 android:layout_width="match_parent"
+                android:textColorHint="@color/blue"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_24dp"
                 android:background="@drawable/background_edit_text_true"
@@ -66,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textErrorUsername"
                 android:layout_marginTop="@dimen/_16dp"
+                android:textColorHint="@color/blue"
                 android:background="@drawable/background_edit_text_true"
                 android:hint="@string/textPassword"
                 android:inputType="textPassword"
@@ -175,7 +177,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
