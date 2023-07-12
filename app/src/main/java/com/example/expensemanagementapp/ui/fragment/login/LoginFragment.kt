@@ -112,39 +112,39 @@ class LoginFragment : BaseViewModelFragment<FragmentLoginBinding, MainViewModel>
 
     override fun initOnClickListener() {
         binding.btnLogin.setOnClickListener {
-            if (binding.username.text.toString().isEmpty()) {
-                isValidate(
-                    false,
-                    resources.getString(R.string.textErrorUsername),
-                    binding.username,
-                    binding.textErrorUsername
-                )
-            } else if (!isPhoneNumberOrGmail(binding.username.text.toString())) {
-                isValidate(
-                    false,
-                    resources.getString(R.string.textErrorUsernameCheckEmailOrPhone),
-                    binding.username,
-                    binding.textErrorUsername
-                )
-            } else if (binding.password.text.toString().isEmpty()) {
-                isValidate(
-                    false,
-                    resources.getString(R.string.textErrorPassword),
-                    binding.password,
-                    binding.textErrorPassword
-                )
-            } else if (!isPasswordValid(binding.password.text.toString())) {
-                isValidate(
-                    false,
-                    resources.getString(R.string.textErrorPasswordValidate),
-                    binding.password,
-                    binding.textErrorPassword
-                )
-            } else {
+//            if (binding.username.text.toString().isEmpty()) {
+//                isValidate(
+//                    false,
+//                    resources.getString(R.string.textErrorUsername),
+//                    binding.username,
+//                    binding.textErrorUsername
+//                )
+//            } else if (!isPhoneNumberOrGmail(binding.username.text.toString())) {
+//                isValidate(
+//                    false,
+//                    resources.getString(R.string.textErrorUsernameCheckEmailOrPhone),
+//                    binding.username,
+//                    binding.textErrorUsername
+//                )
+//            } else if (binding.password.text.toString().isEmpty()) {
+//                isValidate(
+//                    false,
+//                    resources.getString(R.string.textErrorPassword),
+//                    binding.password,
+//                    binding.textErrorPassword
+//                )
+//            } else if (!isPasswordValid(binding.password.text.toString())) {
+//                isValidate(
+//                    false,
+//                    resources.getString(R.string.textErrorPasswordValidate),
+//                    binding.password,
+//                    binding.textErrorPassword
+//                )
+//            } else {
                 findNavController().navigate(
                     R.id.action_loginFragment2_to_kingMainFragment
                 )
-            }
+//            }
         }
 
         binding.register.setOnClickListener {

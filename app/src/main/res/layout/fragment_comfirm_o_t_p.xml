@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/purple"
     android:orientation="vertical"
     tools:context=".ui.fragment.login.ConfirmOTPFragment">
 
@@ -57,7 +57,7 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:inputType="number"
-            android:textColor="@color/blue"
+            android:textColor="@color/purple"
             android:textSize="@dimen/_20sp"
             app:OtpHideLineWhenFilled="false"
             app:OtpItemCount="6"
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_30dp"
                 android:text="@string/textDownTimeOTP"
-                android:textColor="@color/blue"
+                android:textColor="@color/purple"
                 android:textSize="@dimen/_16sp" />
 
             <TextView
@@ -142,7 +142,7 @@
                 android:layout_marginLeft="@dimen/_5dp"
                 android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:text="@string/registerNow"
-                android:textColor="@color/blue"
+                android:textColor="@color/purple"
                 android:textSize="@dimen/_16sp" />
         </LinearLayout>
 
