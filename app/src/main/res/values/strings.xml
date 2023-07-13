@@ -47,4 +47,9 @@
     <string name="forgotPassword">Quên mật khẩu</string>
     <string name="newPassword">Mật khẩu mới</string>
     <string name="pleaseNewPassword">Vui lòng nhập mật khẩu mới</string>
+    <string name="title_home">Home</string>
+    <string name="titleCard">Chi tiêu</string>
+    <string name="title_wallet">Ví</string>
+    <string name="title_chart">Biều đồ</string>
+    <string name="title_me">Cá nhân</string>
 </resources>
