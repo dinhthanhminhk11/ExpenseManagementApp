@@ -11,6 +11,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.expensemanagementapp.base.BaseViewModelFragment
 import com.example.expensemanagementapp.constant.AppConstant
@@ -18,11 +19,9 @@ import com.example.expensemanagementapp.databinding.FragmentKingMainBinding
 import com.example.expensemanagementapp.viewmodel.MainViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class KingMainFragment : BaseViewModelFragment<FragmentKingMainBinding, MainViewModel>(),
-    NavController.OnDestinationChangedListener {
+class KingMainFragment : BaseViewModelFragment<FragmentKingMainBinding, MainViewModel>() {
     private var backPressedTime: Long = 0
     private val BACK_PRESS_INTERVAL: Long = 2000
-
     private lateinit var navController: NavController
     override val viewModel: MainViewModel by lazy {
         (activity as MainActivity).viewModel
@@ -35,42 +34,57 @@ class KingMainFragment : BaseViewModelFragment<FragmentKingMainBinding, MainView
         navController = navHostFragment.navController
         setStatusBarStyle(AppConstant.TYPE_LIGHT, Color.WHITE)
         binding.navView.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.navigation_home -> {
-                    binding.nameTag.text = getString(R.string.title_home)
-                    navController.navigate(R.id.homeFragment)
-                    true
-                }
-
-                R.id.navigation_wallet -> {
-                    binding.nameTag.text = getString(R.string.title_wallet)
-                    navController.navigate(R.id.walletFragment)
-                    true
-                }
-
-                R.id.navigation_add -> {
-//                    navController.navigate(R.id.walletFragment)
-                    true
-                }
-
-                R.id.navigation_chart -> {
-                    binding.nameTag.text = getString(R.string.title_chart)
-                    navController.navigate(R.id.chartFragment)
-                    true
-                }
-
-                R.id.navigation_me -> {
-                    binding.nameTag.text = getString(R.string.title_me)
-                    navController.navigate(R.id.personFragment)
-                    true
-                }
-
-                else -> false
+            val currentDestinationId = navController.currentDestination?.id
+            val selectedDestinationId = when (menuItem.itemId) {
+                R.id.navigation_home -> R.id.homeFragment
+                R.id.navigation_wallet -> R.id.walletFragment
+//                R.id.navigation_add -> R.id.addFragment
+                R.id.navigation_chart -> R.id.chartFragment
+                R.id.navigation_me -> R.id.personFragment
+                else -> null
             }
+
+            if (currentDestinationId != selectedDestinationId) {
+                when (menuItem.itemId) {
+                    R.id.navigation_home -> {
+                        binding.nameTag.text = getString(R.string.title_home)
+                        navController.navigate(R.id.homeFragment)
+                    }
+                    R.id.navigation_wallet -> {
+                        binding.nameTag.text = getString(R.string.title_wallet)
+                        navController.navigate(R.id.walletFragment)
+                    }
+                    R.id.navigation_add -> {
+                        // Xử lý khi nhấn vào item "Add" (tuỳ chọn của bạn)
+                    }
+                    R.id.navigation_chart -> {
+                        binding.nameTag.text = getString(R.string.title_chart)
+                        navController.navigate(R.id.chartFragment)
+                    }
+                    R.id.navigation_me -> {
+                        binding.nameTag.text = getString(R.string.title_me)
+                        navController.navigate(R.id.personFragment)
+                    }
+                }
+            }
+
+            true
         }
     }
 
     override fun initOnClickListener() {
+
+        binding.bellMain.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_kingMainFragment_to_notificationFragment
+            )
+        }
+
+        binding.imageProfile.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_kingMainFragment_to_profileFragment
+            )
+        }
 
     }
 
@@ -103,19 +117,4 @@ class KingMainFragment : BaseViewModelFragment<FragmentKingMainBinding, MainView
             viewLifecycleOwner, onBackPressedCallback
         )
     }
-
-    override fun onDestinationChanged(
-        controller: NavController, destination: NavDestination, arguments: Bundle?
-    ) {
-        when (destination.id) {
-            R.id.homeFragment -> {
-
-            }
-
-            R.id.walletFragment -> {
-
-            }
-        }
-    }
-
 }

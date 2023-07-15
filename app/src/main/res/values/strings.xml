@@ -49,7 +49,11 @@
     <string name="pleaseNewPassword">Vui lòng nhập mật khẩu mới</string>
     <string name="title_home">Home</string>
     <string name="titleCard">Chi tiêu</string>
+    <string name="titleSubCard">Thu Nhập</string>
     <string name="title_wallet">Ví</string>
     <string name="title_chart">Biều đồ</string>
     <string name="title_me">Cá nhân</string>
+    <string name="analytics">Phân tích</string>
+    <string name="viewAll">Xem thêm</string>
+    <string name="transactions">Giao dịch gần đây</string>
 </resources>
