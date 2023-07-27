@@ -1,17 +1,11 @@
 package com.example.expensemanagementapp.ui.fragment.login
 
-import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.expensemanagementapp.MainActivity
 import com.example.expensemanagementapp.R
@@ -32,7 +26,6 @@ class LoginFragment : BaseViewModelFragment<FragmentLoginBinding, MainViewModel>
         }
 
         override fun afterTextChanged(editable: Editable?) {
-
             if (!isInitialized) {
                 return
             }
@@ -112,39 +105,39 @@ class LoginFragment : BaseViewModelFragment<FragmentLoginBinding, MainViewModel>
 
     override fun initOnClickListener() {
         binding.btnLogin.setOnClickListener {
-//            if (binding.username.text.toString().isEmpty()) {
-//                isValidate(
-//                    false,
-//                    resources.getString(R.string.textErrorUsername),
-//                    binding.username,
-//                    binding.textErrorUsername
-//                )
-//            } else if (!isPhoneNumberOrGmail(binding.username.text.toString())) {
-//                isValidate(
-//                    false,
-//                    resources.getString(R.string.textErrorUsernameCheckEmailOrPhone),
-//                    binding.username,
-//                    binding.textErrorUsername
-//                )
-//            } else if (binding.password.text.toString().isEmpty()) {
-//                isValidate(
-//                    false,
-//                    resources.getString(R.string.textErrorPassword),
-//                    binding.password,
-//                    binding.textErrorPassword
-//                )
-//            } else if (!isPasswordValid(binding.password.text.toString())) {
-//                isValidate(
-//                    false,
-//                    resources.getString(R.string.textErrorPasswordValidate),
-//                    binding.password,
-//                    binding.textErrorPassword
-//                )
-//            } else {
+            if (binding.username.text.toString().isEmpty()) {
+                isValidate(
+                    false,
+                    resources.getString(R.string.textErrorUsername),
+                    binding.username,
+                    binding.textErrorUsername
+                )
+            } else if (!isPhoneNumberOrGmail(binding.username.text.toString())) {
+                isValidate(
+                    false,
+                    resources.getString(R.string.textErrorUsernameCheckEmailOrPhone),
+                    binding.username,
+                    binding.textErrorUsername
+                )
+            } else if (binding.password.text.toString().isEmpty()) {
+                isValidate(
+                    false,
+                    resources.getString(R.string.textErrorPassword),
+                    binding.password,
+                    binding.textErrorPassword
+                )
+            } else if (!isPasswordValid(binding.password.text.toString())) {
+                isValidate(
+                    false,
+                    resources.getString(R.string.textErrorPasswordValidate),
+                    binding.password,
+                    binding.textErrorPassword
+                )
+            } else {
                 findNavController().navigate(
                     R.id.action_loginFragment2_to_kingMainFragment
                 )
-//            }
+            }
         }
 
         binding.register.setOnClickListener {

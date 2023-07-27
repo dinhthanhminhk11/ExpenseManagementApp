@@ -15,7 +15,7 @@ interface ApiRequest {
     @POST("auth/register")
     suspend fun register(@Body bodyRegister: BodyRegister): Response<UserRegisterResponse>
 
-    @POST("auth/register")
+    @POST("auth/login")
     suspend fun login(@Body bodyLogin: BodyLogin): Response<UserLoginResponse>
 
     @POST("auth/verifyRegister")

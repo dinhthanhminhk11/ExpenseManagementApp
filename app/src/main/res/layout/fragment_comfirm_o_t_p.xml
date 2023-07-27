@@ -33,6 +33,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/toMail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -52,6 +53,7 @@
             android:id="@+id/otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:OtpCursorColor="@color/red"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_24dp"
             android:focusable="true"
@@ -77,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_30dp"
-                android:text="@string/textDownTimeOTP"
+                android:text="@string/notToOTP"
                 android:textColor="@color/purple"
                 android:textSize="@dimen/_16sp" />
 
@@ -100,6 +102,7 @@
             android:layout_marginTop="@dimen/_122dp"
             android:text="@string/sendMail"
             android:textAlignment="center"
+            android:visibility="gone"
             android:textColor="@color/textColorLogin"
             android:textSize="@dimen/_16sp" />
 
@@ -145,6 +148,13 @@
                 android:textColor="@color/purple"
                 android:textSize="@dimen/_16sp" />
         </LinearLayout>
-
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone" />
     </RelativeLayout>
 </LinearLayout>

@@ -1,7 +1,7 @@
 package com.example.expensemanagementapp.di
 
-import com.example.expensemanagementapp.BuildConfig
 import com.example.expensemanagementapp.api.ApiRequest
+import com.example.expensemanagementapp.constant.AppConstant
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +17,7 @@ class NetModule {
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BuildConfig.MY_URL)
+            .baseUrl(AppConstant.MY_URL)
             .build()
     }
 

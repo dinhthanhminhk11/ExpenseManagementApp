@@ -1,8 +1,9 @@
 package com.example.expensemanagementapp.di
 
-import com.example.expensemanagementapp.repository.Repository
+import android.app.Application
 import com.example.expensemanagementapp.usercase.LoginUserCase
 import com.example.expensemanagementapp.usercase.RegisterUseCase
+import com.example.expensemanagementapp.viewmodel.MainViewModelFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,14 +12,14 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class UseCaseModule {
+class FactoryModule {
     @Singleton
     @Provides
-    fun provideLoginUserCase(repository: Repository): LoginUserCase {
-        return LoginUserCase(repository)
+    fun providerViewModelFactory(
+        application: Application,
+        loginUserCase: LoginUserCase,
+        registerUseCase: RegisterUseCase
+    ): MainViewModelFactory {
+        return MainViewModelFactory(application, loginUserCase,registerUseCase)
     }
-    @Singleton
-    @Provides
-    fun provideRegisterUseCase(repository: Repository): RegisterUseCase =
-        RegisterUseCase(repository)
 }

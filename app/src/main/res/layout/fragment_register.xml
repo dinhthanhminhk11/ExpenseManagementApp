@@ -60,12 +60,12 @@
                 android:layout_marginTop="@dimen/_24dp"
                 android:background="@drawable/background_edit_text_true"
                 android:hint="@string/textPhoneRegister"
-                android:textColorHint="@color/purple"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:maxLines="1"
                 android:padding="@dimen/_14dp"
                 android:textColor="@color/purple"
+                android:textColorHint="@color/purple"
                 android:textSize="@dimen/_16sp" />
 
             <TextView
@@ -85,12 +85,10 @@
                 android:layout_marginTop="@dimen/_16dp"
                 android:background="@drawable/background_edit_text_true"
                 android:hint="@string/textEmailRegister"
-                android:textColorHint="@color/purple"
-                android:inputType="textPassword"
-                android:maxLength="15"
                 android:maxLines="1"
                 android:padding="@dimen/_14dp"
                 android:textColor="@color/purple"
+                android:textColorHint="@color/purple"
                 android:textSize="@dimen/_16sp" />
 
             <TextView
@@ -111,11 +109,11 @@
                 android:background="@drawable/background_edit_text_true"
                 android:hint="@string/textPasswordRegister"
                 android:inputType="textPassword"
-                android:textColorHint="@color/purple"
                 android:maxLength="15"
                 android:maxLines="1"
                 android:padding="@dimen/_14dp"
                 android:textColor="@color/purple"
+                android:textColorHint="@color/purple"
                 android:textSize="@dimen/_16sp" />
 
             <LinearLayout
@@ -130,14 +128,15 @@
                     android:id="@+id/checkUppercase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/check_register_true" />
+                    android:src="@drawable/check_register_false" />
 
                 <TextView
+                    android:id="@+id/textCheckUppercase"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_8dp"
                     android:text="@string/textPasswordRegisterUppercase"
-                    android:textColor="@color/purple"
+                    android:textColor="@color/red"
                     android:textSize="@dimen/_14sp" />
             </LinearLayout>
 
@@ -153,14 +152,15 @@
                     android:id="@+id/checkNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/check_register_true" />
+                    android:src="@drawable/check_register_false" />
 
                 <TextView
+                    android:id="@+id/textCheckNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_8dp"
                     android:text="@string/textPasswordRegisterNumber"
-                    android:textColor="@color/purple"
+                    android:textColor="@color/red"
                     android:textSize="@dimen/_14sp" />
             </LinearLayout>
 
@@ -179,11 +179,12 @@
                     android:src="@drawable/check_register_false" />
 
                 <TextView
+                    android:id="@+id/textCheckLength"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_8dp"
                     android:text="@string/textPasswordRegisterLength"
-                    android:textColor="@color/purple"
+                    android:textColor="@color/red"
                     android:textSize="@dimen/_14sp" />
             </LinearLayout>
 
@@ -197,10 +198,10 @@
                 android:hint="@string/textPasswordRegisterAgain"
                 android:inputType="textPassword"
                 android:maxLength="15"
-                android:textColorHint="@color/purple"
                 android:maxLines="1"
                 android:padding="@dimen/_14dp"
                 android:textColor="@color/purple"
+                android:textColorHint="@color/purple"
                 android:textSize="@dimen/_16sp" />
 
             <TextView
@@ -233,6 +234,15 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

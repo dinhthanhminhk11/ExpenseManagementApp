@@ -25,10 +25,16 @@
     <string name="registerNow"><u>Đăng ký ngay</u></string>
     <string name="textErrorUsername">Vui lòng nhập tài khoản</string>
     <string name="textErrorPassword">Vui lòng nhập mật khẩu</string>
+    <string name="textErrorNotPhone">Vui lòng nhập số điện thoại</string>
+    <string name="textErrorNotEmail">Vui lòng nhập email</string>
     <string name="textErrorUsernameCheckEmailOrPhone">Nhập đúng định dạng email hoặc số điện thoại</string>
+    <string name="textErrorPhone">Nhập đúng định dạng số điện thoại</string>
+    <string name="textErrorPassAgain">Mật khẩu không trùng nhau</string>
+    <string name="textErrorEmail">Nhập đúng định dạng email</string>
+    <string name="policyNotCheck">Hãy đồng ý với điều khoản của chúng tôi</string>
     <string name="textErrorPasswordValidate">Mật khẩu phỉa từ 8 đến 15 ký tự có chữ hoa, chữ thường, có kỹ tự đặc biệt và số</string>
     <string name="textRegisterTop">Vui lòng nhập các thông tin sau</string>
-    <string name="toPhone">Nhập mã xác thực 6 số được gửi đến số:%s</string>
+    <string name="toPhone">Nhập mã xác thực 6 số được gửi đến email: %s</string>
     <string name="textPhoneRegister">Số điện thoại</string>
     <string name="textEmailRegister">Email của bạn</string>
     <string name="textPasswordRegister">Nhập mật khẩu của bạn</string>
@@ -56,4 +62,5 @@
     <string name="analytics">Phân tích</string>
     <string name="viewAll">Xem thêm</string>
     <string name="transactions">Giao dịch gần đây</string>
+    <string name="notToOTP">Bạn không nhận được OTP</string>
 </resources>
